@@ -68,13 +68,13 @@ class SymfonyFilesystemPassSpec extends ObjectBehavior
         ]);
 
         $container->setDefinition(
-            'bengor.file.infrastructure.domain.model.symfony_filesystem_file',
+            'bengor.file.infrastructure.domain.model.file_filesystem',
             Argument::type(Definition::class)
         )->shouldBeCalled()->willReturn($definition);
 
         $container->setAlias(
             'bengor_file.file.filesystem',
-            'bengor.file.infrastructure.domain.model.symfony_filesystem_file'
+            'bengor.file.infrastructure.domain.model.file_filesystem'
         )->shouldBeCalled();
 
         $this->process($container);

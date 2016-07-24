@@ -41,7 +41,7 @@ class SymfonyFilesystemPass implements CompilerPassInterface
             }
 
             $container->setDefinition(
-                'bengor.file.infrastructure.domain.model.symfony_filesystem_' . $key,
+                'bengor.file.infrastructure.domain.model.' . $key . '_filesystem',
                 new Definition(
                     SymfonyFilesystem::class, [
                         $file['upload_destination'],
@@ -52,7 +52,7 @@ class SymfonyFilesystemPass implements CompilerPassInterface
 
             $container->setAlias(
                 'bengor_file.' . $key . '.filesystem',
-                'bengor.file.infrastructure.domain.model.symfony_filesystem_' . $key
+                'bengor.file.infrastructure.domain.model.' . $key . '_filesystem'
             );
         }
     }
