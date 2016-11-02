@@ -18,8 +18,8 @@
     ],
     "require": {
         "php": "^5.5 || ^7.0",
-        "bengor-file/symfony-filesystem-bridge": "dev-master",
-        "bengor-file/file-bundle": "dev-master"
+        "bengor-file/symfony-filesystem-bridge": "^1.0.0",
+        "bengor-file/file-bundle": "^0.2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^1.11",
@@ -42,7 +42,5 @@
         "branch-alias": {
             "dev-master": "1.1.x-dev"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
